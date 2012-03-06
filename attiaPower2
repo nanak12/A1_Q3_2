@@ -1,0 +1,42 @@
+/**
+ * @(#)attiaPower2.java
+ * @author Mohamed Attia 
+ * @version 1.00 2012/3/6
+ */
+public class attiaPower2 {
+  public static void main (String [] args){
+	
+		System.out.println("the resulte is : "+ recPower(0.9,7));
+	}
+	
+	public static double recPower(double x, int y)
+    {
+        double result = 0;
+        
+        if(y >= 0)
+        {
+        	System.out.println("5");
+            if (y == 1)
+            {
+                result = x;
+            }
+            else if (y == 0)
+            {
+                result = 1;
+            }
+            if(y > 1)
+            {
+                if ( y%2 == 0){
+                	result = recPower( x, y/2) * recPower( x, y/2);
+                }
+                else {
+                	result = x * recPower( x, y/2) * recPower( x, y/2);
+                }
+            }
+        }
+		
+        return result;
+    }
+	
+	
+}
